@@ -148,3 +148,37 @@ td, th{
     border: 1px solid #000000;
     padding: 8px 15px;
 }
+
+/*css da página inicial*/
+.banner{
+	width: 100%;
+}
+
+.titulo-principal{
+	text-align: center;
+	font-size: 2em;/*o dobro da fonte padrão*/
+	margin: 0 0 1em;
+	clear: left; /*Limpa o float da imagem utensilios para não influenciar nos elementos logo abaixo*/
+}
+
+.principal p{
+	margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios{
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.imagembeneficios {
+    width: 60%
+}
