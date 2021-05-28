@@ -185,9 +185,9 @@ td, th {
 }
 
 .utensilios {
-	width: 120px;
-	float: left;
-	margin: 0 20px 20px 0;
+    width: calc(40% - (26px * 4));
+    float: left;
+    Margin: 0 20px 20px 
 }
 
 .mapa {
