@@ -94,10 +94,6 @@ footer {
 	margin: 20px 0 0;
 }
 
-main {
-	
-}
-
 form {
 	margin: 40px 0;
 }
@@ -265,4 +261,18 @@ td, th {
     .lista-beneficios, .imagem-beneficios {
         width: 100%;
     }
+
+	.produtos {
+        display: block;
+        width: auto;
+    }
+
+    .produtos li {
+        display: block;
+        width: auto;
+    }
+
+	.enviar{
+		width: 95%;
+	}
 }
