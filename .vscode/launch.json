@@ -21,6 +21,15 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\3-javascript-introducao\\8-loops.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "ByteBank",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\4-javascript-orientacao-a-objetos\\index.js"
         }
     ]
 }

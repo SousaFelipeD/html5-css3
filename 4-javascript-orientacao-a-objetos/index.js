@@ -1,25 +1,27 @@
 import{Cliente} from "./Cliente.js"
 import{ContaCorrente} from "./ContaCorrente.js"
 
-const cliente1 = new Cliente();
-cliente1.nome = "Ricardo";
-cliente1.cpf = 8752897528;
-console.log(cliente1);
-
-const cliente2 = new Cliente();
-cliente2.nome = "Alice";
-cliente2.cpf = 86379438763;
-console.log(cliente2);
-
-const contaCorrenteRicardo = new ContaCorrente();
-contaCorrenteRicardo._saldo = 0;
-contaCorrenteRicardo.agencia = 1001;
-contaCorrenteRicardo.cliente = cliente1;
+const contaCorrenteRicardo = new ContaCorrente(new Cliente("Ricardo", 8752897528), 1005);
+console.log(`Criando a conta do ${contaCorrenteRicardo.cliente.nome}...`);
 console.log(contaCorrenteRicardo);
-console.log(contaCorrenteRicardo._saldo);
+
+const contaCorrenteAlice = new ContaCorrente(new Cliente("Alice", 86379438763), 1005);
+console.log(`\nCriando a conta da ${contaCorrenteAlice.cliente.nome}...`);
+console.log(contaCorrenteAlice);
+
+console.log(`\nContas criadas: ${ContaCorrente.numeroContas}`);
+
+console.log(`\nDeposito de R$100 na conta do ${contaCorrenteRicardo.cliente.nome}`);
 contaCorrenteRicardo.depositar(100);
-console.log(contaCorrenteRicardo._saldo);
+console.log("Saldo: R$" + contaCorrenteRicardo.saldo);
+
+console.log(`\nSaque de R$30 na conta do ${contaCorrenteRicardo.cliente.nome}`);
 contaCorrenteRicardo.sacar(30);
-console.log(contaCorrenteRicardo._saldo);
+console.log("Saldo: R$" + contaCorrenteRicardo.saldo);
+
+console.log(`\nTransferencia de R$20 da conta do ${contaCorrenteRicardo.cliente.nome} para a conta da ${contaCorrenteAlice.cliente.nome}`);
+contaCorrenteRicardo.transferir(20, contaCorrenteAlice);
+console.log(`Saldo conta ${contaCorrenteRicardo.cliente.nome}: R$${contaCorrenteRicardo.saldo}`);
+console.log(`Saldo conta ${contaCorrenteAlice.cliente.nome}: R$${contaCorrenteAlice.saldo}`);
 
 
